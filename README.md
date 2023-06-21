@@ -22,7 +22,7 @@ This command compiles the ST7066.c file and produces an object file named ST7066
 After building the driver, you can incorporate it into your project and utilize the functionalities provided by the ST7066 and HD44780 LCD controllers.
 
 # Usage
-Include the ST7066.h header file in your code and make use of the driver functions provided to interact with the ST7066 or HD44780 LCD controller.
+Include the ST7066.h header file in your code, call gpioInitialise() for pigpio and Startup for screen initialization and make use of the driver functions provided to interact with the ST7066 or HD44780 LCD controller.
 
 ```shell
 #include "ST7066.h"
