@@ -27,6 +27,8 @@ Include the ST7066.h header file in your code and make use of the driver functio
 ```shell
 #include "ST7066.h"
 
+gpioInitialise(); 
+Startup();
 // Your code here
 ```
 
