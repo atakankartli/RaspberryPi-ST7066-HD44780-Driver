@@ -22,7 +22,7 @@
 static uint8_t dataPins[] = {D0, D1, D2, D3, D4, D5, D6, D7};
 char SCREEN_BUFFER[80];
 
-pthread_mutex_t timeserverMutex = PTHREAD_MUTEX_INITIALIZER;
+pthread_mutex_t  Mutex = PTHREAD_MUTEX_INITIALIZER;
 
 void  modeSelect(uint8_t registers_sw) // tamam-test et
 {
@@ -453,7 +453,7 @@ void  Startup()
 
 uint8_t  PositionXYString(uint8_t x, uint8_t y, char *str)
 {
-    pthread_mutex_lock(&timeserverMutex);
+    pthread_mutex_lock(&Mutex);
 
     switch (y)
     {
@@ -472,7 +472,7 @@ uint8_t  PositionXYString(uint8_t x, uint8_t y, char *str)
         // read characters and increment index
          SendData(str[i++]);
     }
-    pthread_mutex_unlock(&timeserverMutex);
+    pthread_mutex_unlock(&Mutex);
 }
 
 void  SetUppNibble(unsigned short int data)
