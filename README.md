@@ -1,6 +1,6 @@
 # ST7066, HD44780 Driver for Raspberry Pi
 
-This is a repository that provides a driver for the ST7066 and HD44780 LCD controllers for use with Raspberry Pi. The driver utilizes the pigpio library as a dependency.
+This is a repository that provides a driver for the 20x2 ST7066u which is based on HD44780 LCD controller. The driver utilizes the pigpio library as a dependency.
 
 ## Installation
 
